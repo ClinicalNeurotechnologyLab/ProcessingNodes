@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {}
+
+[project]
+name = "ProcessingNodes"
+dynamic = ["version"]
+description = "A framework and library for both online and offline time series signal processing."
+keywords = ["DSP", "signal processing", "biosignal processing", "biosignal", "EEG", "MEG", "ECG", "MCG", "MMG", "EMG", "signal filter"]
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {text = "BSD-3-Clause"}
+authors = [
+  {name = "Niels Peekhaus", email = "peekhaus@outlook.com"},
+  {name = "Jan Zerfowski", email = "research@janzerfowski.de"}
+]
+maintainers = [
+  {name = "Niels Peekhaus", email = "peekhaus@outlook.com"}
+]
+
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: BSD License"
+]
+
+
+requires-python = ">=3.10"
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "pylsl",
+  "matplotlib"
+]
+
+[project.optional-dependencies]
+# TODO: make pylsl and matplotlib optional
+# lsl = ["pylsl"]
+# plotting = ["matplotlib"]
+testing = ["pytest", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/ClinicalNeurotechnologyLab/ProcessingNodes"
+Repository = "https://github.com/ClinicalNeurotechnologyLab/ProcessingNodes"
+Issues = "https://github.com/ClinicalNeurotechnologyLab/ProcessingNodes/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "processingnodes.__version__"}
+
