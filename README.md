@@ -1,5 +1,7 @@
 # ProcessingNodes
 
+[![pyTest 3.9-3.13](https://github.com/ClinicalNeurotechnologyLab/ProcessingNodes/actions/workflows/python-package.yml/badge.svg)](https://github.com/ClinicalNeurotechnologyLab/ProcessingNodes/actions/workflows/python-package.yml)
+
 > [!IMPORTANT]
 > This project is currently at a very early stage. Fundamental and breaking changes may occur over the next releases.
 
